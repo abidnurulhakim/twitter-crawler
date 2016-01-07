@@ -19,3 +19,5 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+Route::get('crawler', ['as' => 'crawler.index', 'uses' => 'CrawlerController@index']);
+Route::post('crawler/crawling', ['as' => 'crawler.crawling', 'uses' => 'CrawlerController@crawling']);
